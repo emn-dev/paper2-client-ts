@@ -1,0 +1,22 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    // "module": "commonjs",
+    "module": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["node"],
+
+    // Other Outputs
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "./dist/@types",
+
+    // Recommended Options
+    "skipLibCheck": true
+  }
+}

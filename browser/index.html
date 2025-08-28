@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+  </head>
+  <body>
+    <main>Testing</main>
+    <p id="showIt"></p>
+    <script>
+      import("./app.esm.js").then((paperModule) => {
+        const { paper2SvgString2 } = paperModule;
+        // console.log(paper2SvgString2);
+
+        document.getElementById("showIt").innerHTML = window.paper2SvgString;
+
+        setTimeout(() => {
+          const svgEle = document.getElementsByTagName("svg")[0];
+          svgEle.insertAdjacentHTML("beforeend", paper2SvgString2);
+        }, 555);
+      });
+    </script>
+  </body>
+</html>
