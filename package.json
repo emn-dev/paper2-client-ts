@@ -4,8 +4,8 @@
   "scripts": {
     "postinstall": "npm run build",
     "build": "node build.mjs",
-    "start-nodejs": "node dist/app.cjs.js",
-    "serve": "node --experimental-transform-types ./http-server.ts"
+    "serve:node": "node dist/app.cjs.js",
+    "serve:web": "node --experimental-transform-types ./http-server.ts"
   },
   "dependencies": {
     "paper2": "1.0.88"
