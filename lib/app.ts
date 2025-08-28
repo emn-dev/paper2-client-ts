@@ -27,7 +27,7 @@ const mySvg = `
   </svg>
   `;
 
-const proj = new Project(new Size(1, 1));
+const proj = new Project(new Size(100, 100));
 
 const layer = proj.importSVG(mySvg) as LayerItem;
 const items = layer.children["export"].getItems({ recursive: true });
@@ -42,18 +42,17 @@ if (typeof window !== "undefined") {
 // ----------
 
 const segments = [new Point(100, 100), new Point(100, 200)];
-// const path = new Path([100, 100], [100, 200]); // TS error
 const path = new Path(segments);
 path.name = "foo2";
 
 const segments2 = [new Point(50, 150), new Point(150, 150)];
-// const path2 = new Path([50, 150], [150, 150]); // TS error
 const path2 = new Path(segments2);
 path2.name = "bar2";
 
 const layer2 = new Layer({
   children: [path, path2],
-  strokeColor: "black",
+  strokeColor: "green",
+  strokeWidth: "3px",
   position: paper.view.center,
 });
 
