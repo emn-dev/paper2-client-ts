@@ -8,7 +8,7 @@
     "serve:web": "node --experimental-transform-types ./http-server.ts"
   },
   "dependencies": {
-    "paper2": "1.0.88"
+    "paper2": "1.0.98"
   },
   "devDependencies": {
     "@types/node": "^22.17.1",
